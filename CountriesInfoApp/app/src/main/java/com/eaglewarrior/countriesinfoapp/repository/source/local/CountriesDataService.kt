@@ -3,6 +3,7 @@ package com.eaglewarrior.countriesinfoapp.repository.source.local
 import android.content.Context
 import com.eaglewarrior.countriesinfoapp.repository.models.Countries
 import com.eaglewarrior.countriesinfoapp.repository.models.Country
+import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
@@ -23,6 +24,21 @@ internal class CountriesDataService {
         return adapter.fromJson(countriesJson)
         // Code to get Countries from Json
     }
+
+    @JsonClass(generateAdapter = true)
+    data class JsonPodcast(
+        val name: String,
+        val nativeName: String,
+        val capital: String,
+        val population: Int,
+        val region: String,
+        val subregion: String,
+        val area: Double,
+        val currencies: List<String>,
+        val languages: List<String>,
+        val borders: List<String>,
+        val numericCode: String
+    )
 
 //    suspend fun getCountry(id: Int): Country {
 //        // Cod to get a single country from Json
