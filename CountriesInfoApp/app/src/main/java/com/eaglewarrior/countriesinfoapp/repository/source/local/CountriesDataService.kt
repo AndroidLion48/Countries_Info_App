@@ -28,32 +28,5 @@ internal class CountriesDataService {
         val adapter: JsonAdapter<List<Country>> = moshi.adapter(listType)
         val countryList = adapter.fromJson(countriesJson)
         return countryList
-
-
-
-
-
-
-        //        val countriesAdapter = moshi.adapter(Countries::class.java)
-//        countries?.let {
-//          val msg = countries.fromJson(countries)
-//            val msg = countries
-//        }
     }
-
-//    suspend fun getCountry(id: Int): Country {
-        // Cod to get a single country from Json
-
-//    fun getCountry(context: Context): Country? {
-//        val countries = "countries.json"
-//        val moshi = Moshi.Builder()
-//            .add(KotlinJsonAdapterFactory())
-//            .build()
-//        val adapter = moshi.adapter<Country>(Countries::class.java)
-//        val countryJson = context.assets.open(countries).bufferedReader().use { it.readText() }
-//
-//        return adapter.fromJson(countryJson)
-//        // Code to get Countries from Json
-//    }
-
 }

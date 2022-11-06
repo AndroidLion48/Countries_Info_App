@@ -6,11 +6,13 @@ import com.eaglewarrior.countriesinfoapp.repository.source.local.CountriesDataSe
 
 class CountriesRepository {
 
-    private val countriesDataService: CountriesDataService = CountriesDataService()
+    private val countriesDataService = CountriesDataService()
 
 
-    fun getAllCountries(context: Context): List<Country>? {
-        return countriesDataService.getAllCountries(context)
+    fun getAllCountries(context: Context): ArrayList<Country> {
+        val countriesArrayList: ArrayList<Country> = arrayListOf<Country>()
+        countriesArrayList.addAll(countriesDataService.getAllCountries(context)!!)
+        return countriesArrayList
     }
 
 //    suspend fun getCountry(context: Context): Country? {
