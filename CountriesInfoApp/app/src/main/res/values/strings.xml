@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Countries Info App</string>
+    <string name="main_activity_title">World Countries</string>
+    <string name="neighboring_countries">Neighboring Countries</string>
+    <string name="languages">Languages</string>
+    <string name="currencies">Currencies</string>
+    <string name="area">Area</string>
+    <string name="sub_region">Sub-Region</string>
+    <string name="region">Region</string>
+    <string name="population">Population</string>
+    <string name="capital_city">Capital City</string>
+    <string name="native_name">Native Name</string>
+
 </resources>

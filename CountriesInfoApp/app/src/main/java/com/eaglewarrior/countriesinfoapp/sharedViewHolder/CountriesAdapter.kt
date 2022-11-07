@@ -12,7 +12,7 @@ import com.eaglewarrior.countriesinfoapp.DetailsActivity
 import com.eaglewarrior.countriesinfoapp.R
 import com.eaglewarrior.countriesinfoapp.repository.models.Country
 
-class CountriesAdapter(private val countryList: ArrayList<Country>, private val context: Context): RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
+class CountriesAdapter(private val countryList: ArrayList<Country>, private val context: Context) : RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
 
     lateinit var currentCountry: Country
 
@@ -33,8 +33,6 @@ class CountriesAdapter(private val countryList: ArrayList<Country>, private val 
             context.startActivity(intent)
         })
     }
-
-
     override fun getItemCount(): Int {
         return countryList.size
     }
@@ -49,6 +47,7 @@ class CountriesAdapter(private val countryList: ArrayList<Country>, private val 
         init {
             countryTitleTv = itemView.findViewById(R.id.country_title_tv)
             itemView.setOnClickListener(this)
+
         }
 
         // Instructions for onClickListener and it's response
