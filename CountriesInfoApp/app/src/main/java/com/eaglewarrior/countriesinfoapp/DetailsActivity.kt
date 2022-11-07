@@ -1,6 +1,8 @@
 package com.eaglewarrior.countriesinfoapp
 
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.eaglewarrior.countriesinfoapp.repository.models.Country
@@ -18,10 +20,8 @@ class DetailsActivity : AppCompatActivity() {
     private lateinit var currenciesTv: TextView
     private lateinit var languageTv: TextView
     private lateinit var neighboringCountriesTv: TextView
+    private lateinit var neighboringLabelTv: TextView
     // Declaring Variables
-
-    private lateinit var adapter: CountriesAdapter
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +30,9 @@ class DetailsActivity : AppCompatActivity() {
         //Check for Bundle. Get Data from bundle
 
         val currentCountry: Country? = intent.getParcelableExtra("Object")
+
+        supportActionBar?.title = currentCountry?.name
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // Initializing Variables
         countryNameTv = findViewById(R.id.country_name_tv)
@@ -51,12 +54,26 @@ class DetailsActivity : AppCompatActivity() {
         currenciesTv.text = currentCountry?.currencies?.joinToString(", ")
 
         areaTv = findViewById(R.id.area_tv)
-        areaTv.text = currentCountry?.area.toString()
+        areaTv.text = currentCountry?.area.toString()+ " km²"
 
         populationTv = findViewById(R.id.population_tv)
-        populationTv.text = currentCountry?.population?.toString()
+        populationTv.text = "%,d".format(currentCountry?.population)
 
         neighboringCountriesTv = findViewById(R.id.neighboring_countries_tv)
-        neighboringCountriesTv.text = currentCountry?.borders?.joinToString(", ")
+        neighboringCountriesTv.text = currentCountry?.borders?.joinToString()
 
-    }}
+//        neighboringLabelTv = findViewById(R.id.neighboring_label_tv)
+//        if (currentCountry?.borders?.isNotEmpty() == true) {
+//            neighboringLabelTv.visibility = View.VISIBLE
+//            neighboringCountriesTv.visibility = View.VISIBLE
+//            neighboringCountriesTv.text = currentCountry?.borders?.joinToString(", ")
+//        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            android.R.id.home -> finish()
+        }
+        return true
+    }
+}

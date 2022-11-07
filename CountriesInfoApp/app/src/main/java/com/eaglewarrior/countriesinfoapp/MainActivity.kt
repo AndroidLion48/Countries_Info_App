@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.title = getString(R.string.main_activity_title)
         // Initializing Variables
         recyclerView = findViewById(R.id.recycler_view)
         countryList = countriesRepository.getAllCountries(context = this)
