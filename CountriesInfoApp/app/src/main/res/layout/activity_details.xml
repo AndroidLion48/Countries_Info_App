@@ -1,16 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".DetailsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Native Name"
+        android:textSize="12sp"
+        />
 
 
     <TextView
         android:id="@+id/country_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
-</FrameLayout>
+        android:text="United States"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capital City"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/capital_city_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Population"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/population_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Region"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/region_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sub-Region"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/sub_region_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/area_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currencies"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/currencies_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Languages"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/languages_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Neigboring Counties"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/neighboring_countries_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textSize="20sp"
+        />
+</LinearLayout>

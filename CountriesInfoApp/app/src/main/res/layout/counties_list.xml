@@ -12,4 +12,5 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:textAppearance="?attr/textAppearanceHeadline6" />
+
 </LinearLayout>
