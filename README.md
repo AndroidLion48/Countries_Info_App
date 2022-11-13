@@ -6,6 +6,9 @@ An app that list and display details of countries
 
 * Explicit Intent practice
 
+![Countries_List_Screenshot](https://user-images.githubusercontent.com/92341925/201549547-d403689c-eba5-42cd-bba6-adae09670cbb.png)
+![Country_Details_Screenshot](https://user-images.githubusercontent.com/92341925/201549557-c9c8048d-148e-42c6-a3bf-2fcd4a313089.png)
+
 
 Introduction
 ----------------
